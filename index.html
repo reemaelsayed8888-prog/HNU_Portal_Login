@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HNU Login</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f3b46, #1e3c72);
+}
+
+.login-card {
+    background: white;
+    width: 320px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background: #1e3c72;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h2 {
+    margin: 15px 0 5px;
+}
+
+p {
+    color: gray;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #8fa7c6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6e8fb8;
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: gray;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-card">
+    <div class="logo">HNU</div>
+    <h2>Welcome Back</h2>
+    <p>Sign in to your student portal</p>
+
+    <input type="text" id="username" placeholder="Enter your username">
+    <input type="password" id="password" placeholder="Enter your password">
+
+    <button onclick="login()">Sign In</button>
+
+    <div class="footer">
+        Helwan National University<br>
+        Student Information System
+    </div>
+</div>
+
+<script>
+function login() {
+    var user = document.getElementById("username").value;
+    var pass = document.getElementById("password").value;
+
+    if (user === "913240190" && pass === "41154115rR") {
+        window.location.href = "home.html";
+    } else {
+        alert("Wrong Username or Password");
+    }
+}
+</script>
+
+</body>
+</html>
